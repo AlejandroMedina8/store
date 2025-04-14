@@ -1,10 +1,11 @@
-import { Component, inject, signal, SimpleChanges } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
+import { RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, RouterLinkWithHref, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
